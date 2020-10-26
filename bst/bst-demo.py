@@ -41,3 +41,29 @@ class BSTDemo:
             #rints in same line
             print(curr.data, end =" ")
             self._in_order(curr.right_child)
+    
+    def pre_order(self):
+        #root, left, right
+        self._pre_order(self.root)
+        print("")
+
+    def _pre_order(self, curr):
+        if curr:
+            print(curr.data, end =" ")
+            self._in_order(curr.right_child)
+            self._in_order(curr.left_child)
+    
+    def post_order(self):
+        #left, right, root
+        self._post_order(self.root)
+        print("")
+
+    def _post_order(self, curr):
+        if curr:
+            self._in_order(curr.left_child)
+            self._in_order(curr.right_child)
+            print(curr.data, end =" ")
+            
+        
+
+    
