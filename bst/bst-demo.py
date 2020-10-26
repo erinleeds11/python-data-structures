@@ -30,4 +30,14 @@ class BSTDemo:
                 self._insert(curr.left_child, key)
 
 
-        
+    def in_order(self):
+        #left, root, right
+        self._in_order(self.root)
+        print("")
+
+    def _in_order(self, curr):
+        if curr:
+            self._in_order(curr.left_child)
+            #rints in same line
+            print(curr.data, end =" ")
+            self._in_order(curr.right_child)
